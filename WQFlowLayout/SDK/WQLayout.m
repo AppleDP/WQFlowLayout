@@ -16,6 +16,8 @@
 @property (nonatomic, assign) CGFloat aCenter;
 // collectionView 的长或宽
 @property (nonatomic, assign) CGFloat cSize;
+// item 的长或宽
+@property (nonatomic, assign) CGFloat iSize;
 @end
 
 @implementation WQLayout
@@ -36,6 +38,8 @@
     
     // collectionView 的长或宽
     self.cSize = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? self.collectionView.width : self.collectionView.height;
+    
+    self.iSize = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? self.itemSize.width : self.itemSize.height;
 }
 
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect{
@@ -62,18 +66,18 @@
         self.aCenter = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? attribute.center.x : attribute.center.y;
         min = MIN(fabs(min), fabs(self.aCenter - self.cCenter)) == fabs(min) ? min : self.aCenter - self.cCenter;
     }
-    
+
     // 调节移动停止后的 Offset
     if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
-        proposedContentOffset.x = proposedContentOffset.x + min - velocity.x;
+        proposedContentOffset.x = proposedContentOffset.x + min;
     }else {
-        proposedContentOffset.y = proposedContentOffset.y + min - velocity.y;
+        proposedContentOffset.y = proposedContentOffset.y + min;
     }
     return proposedContentOffset;
 }
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
-    return YES;
+    return !CGRectEqualToRect(newBounds, self.collectionView.bounds);;
 }
 
 #pragma mark Scale Flow Layout
