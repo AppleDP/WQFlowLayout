@@ -20,7 +20,6 @@
 		844F0BDB1D5880CF00ACF938 /* WQLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BD81D5880CF00ACF938 /* WQLayout.m */; };
 		846660231D59A79E00F62098 /* rotation1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8466601F1D59A79E00F62098 /* rotation1.png */; };
 		846660241D59A79E00F62098 /* rotation2.png in Resources */ = {isa = PBXBuildFile; fileRef = 846660201D59A79E00F62098 /* rotation2.png */; };
-		846660251D59A79E00F62098 /* rotation3.png in Resources */ = {isa = PBXBuildFile; fileRef = 846660211D59A79E00F62098 /* rotation3.png */; };
 		846660261D59A79E00F62098 /* scale.png in Resources */ = {isa = PBXBuildFile; fileRef = 846660221D59A79E00F62098 /* scale.png */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +64,6 @@
 		844F0BD81D5880CF00ACF938 /* WQLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLayout.m; sourceTree = "<group>"; };
 		8466601F1D59A79E00F62098 /* rotation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation1.png; sourceTree = "<group>"; };
 		846660201D59A79E00F62098 /* rotation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation2.png; sourceTree = "<group>"; };
-		846660211D59A79E00F62098 /* rotation3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation3.png; sourceTree = "<group>"; };
 		846660221D59A79E00F62098 /* scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,7 +173,6 @@
 			children = (
 				8466601F1D59A79E00F62098 /* rotation1.png */,
 				846660201D59A79E00F62098 /* rotation2.png */,
-				846660211D59A79E00F62098 /* rotation3.png */,
 				846660221D59A79E00F62098 /* scale.png */,
 			);
 			path = UIScreenshot;
@@ -290,7 +287,6 @@
 				846660231D59A79E00F62098 /* rotation1.png in Resources */,
 				846660261D59A79E00F62098 /* scale.png in Resources */,
 				844F0B961D58141200ACF938 /* Assets.xcassets in Resources */,
-				846660251D59A79E00F62098 /* rotation3.png in Resources */,
 				844F0B941D58141200ACF938 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
