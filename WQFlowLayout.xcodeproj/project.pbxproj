@@ -21,6 +21,7 @@
 		846660231D59A79E00F62098 /* rotation1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8466601F1D59A79E00F62098 /* rotation1.png */; };
 		846660241D59A79E00F62098 /* rotation2.png in Resources */ = {isa = PBXBuildFile; fileRef = 846660201D59A79E00F62098 /* rotation2.png */; };
 		846660261D59A79E00F62098 /* scale.png in Resources */ = {isa = PBXBuildFile; fileRef = 846660221D59A79E00F62098 /* scale.png */; };
+		846660281D59B89400F62098 /* rotation3.png in Resources */ = {isa = PBXBuildFile; fileRef = 846660271D59B89400F62098 /* rotation3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		8466601F1D59A79E00F62098 /* rotation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation1.png; sourceTree = "<group>"; };
 		846660201D59A79E00F62098 /* rotation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation2.png; sourceTree = "<group>"; };
 		846660221D59A79E00F62098 /* scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.png; sourceTree = "<group>"; };
+		846660271D59B89400F62098 /* rotation3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		8466601E1D59A79E00F62098 /* UIScreenshot */ = {
 			isa = PBXGroup;
 			children = (
+				846660271D59B89400F62098 /* rotation3.png */,
 				8466601F1D59A79E00F62098 /* rotation1.png */,
 				846660201D59A79E00F62098 /* rotation2.png */,
 				846660221D59A79E00F62098 /* scale.png */,
@@ -284,6 +287,7 @@
 				844F0BCE1D586C3E00ACF938 /* dog.jpg in Resources */,
 				844F0B991D58141200ACF938 /* LaunchScreen.storyboard in Resources */,
 				846660241D59A79E00F62098 /* rotation2.png in Resources */,
+				846660281D59B89400F62098 /* rotation3.png in Resources */,
 				846660231D59A79E00F62098 /* rotation1.png in Resources */,
 				846660261D59A79E00F62098 /* scale.png in Resources */,
 				844F0B961D58141200ACF938 /* Assets.xcassets in Resources */,
