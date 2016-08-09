@@ -44,16 +44,24 @@
 
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect{
     NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
-    if (self.type == WQScaleLayout) {
-        return [self scaleWithAttributes:attributes];
-    }else{
-        return [self rotationWithAttributes:attributes];
+    NSMutableArray<UICollectionViewLayoutAttributes *> *att = [[NSMutableArray alloc] initWithCapacity:attributes.count];
+    for (UICollectionViewLayoutAttributes *attribute in attributes) {
+        self.aCenter = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? attribute.center.x : attribute.center.y;
+        if (self.type == WQScaleLayout) {
+            [att addObject:[self scaleWithAttribute:attribute]];
+        }else if(self.type == WQRotationLayout1) {
+            [att addObject:[self rotation1WithAttribute:attribute]];
+        }else if(self.type == WQRotationLayout2) {
+            [att addObject:[self rotation2WithAttribute:attribute]];
+        }else {
+            [att addObject:[self rotation3WithAttribute:attribute]];
+        }
     }
+    return att;
 }
 
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset
                                  withScrollingVelocity:(CGPoint)velocity{
-    NSLog(@"===== velocity: %@ =====",NSStringFromCGPoint(velocity));
     CGRect rect;
     rect.origin.x = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? proposedContentOffset.x : 0;
     rect.origin.y = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? 0 : proposedContentOffset.y;
@@ -81,24 +89,45 @@
 }
 
 #pragma mark Scale Flow Layout
-- (NSArray<UICollectionViewLayoutAttributes *> *)scaleWithAttributes:(NSArray<UICollectionViewLayoutAttributes *> *)attributes{
-    for (UICollectionViewLayoutAttributes *attribute in attributes) {
-        self.aCenter = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? attribute.center.x : attribute.center.y;
-        CGFloat scale = 1 - fabs(self.aCenter - self.cCenter)/self.cSize;
-        attribute.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale);
-    }
-    return attributes;
+- (UICollectionViewLayoutAttributes *)scaleWithAttribute:(UICollectionViewLayoutAttributes *)attribute{
+    CGFloat scale = 1 - fabs(self.aCenter - self.cCenter)/self.cSize;
+    attribute.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale);
+    return attribute;
 }
 
 
-#pragma mark Rotation Flow Layout
-- (NSArray<UICollectionViewLayoutAttributes *> *)rotationWithAttributes:(NSArray<UICollectionViewLayoutAttributes *> *)attributes{
-    for (UICollectionViewLayoutAttributes *attribute in attributes) {
-        self.aCenter = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? attribute.center.x : attribute.center.y;
-        CGFloat rotation = (self.cCenter - self.aCenter)/self.cSize;
-        attribute.transform = CGAffineTransformRotate(CGAffineTransformIdentity, M_PI/2 * rotation);
+#pragma mark Rotation Flow Layout --- 1
+- (UICollectionViewLayoutAttributes*)rotation1WithAttribute:(UICollectionViewLayoutAttributes *)attribute{
+    CGFloat rotation = (self.cCenter - self.aCenter)/self.cSize;
+    rotation = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? -rotation : rotation;
+    attribute.transform = CGAffineTransformRotate(CGAffineTransformIdentity, M_PI/4 * rotation);
+    return attribute;
+}
+
+#pragma mark Rotation Flow Laout --- 2
+- (UICollectionViewLayoutAttributes *)rotation2WithAttribute:(UICollectionViewLayoutAttributes *)attribute{
+    CGFloat rotation = (self.cCenter - self.aCenter)/self.cSize;
+    CATransform3D tran3D = CATransform3DIdentity;
+    tran3D.m34 = -0.002;
+    if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
+        attribute.transform3D = CATransform3DRotate(tran3D, M_PI * 3/4 * rotation, 0.5, 1, 0);
+    }else {
+        attribute.transform3D = CATransform3DRotate(tran3D, M_PI * 3/4 * rotation, 1, 0.5, 0);
     }
-    return attributes;
+    return attribute;
+}
+
+#pragma mark Rotation Flow Laout --- 3
+- (UICollectionViewLayoutAttributes *)rotation3WithAttribute:(UICollectionViewLayoutAttributes *)attribute{
+    CGFloat rotation = (self.cCenter - self.aCenter)/self.cSize;
+    CATransform3D tran3D = CATransform3DIdentity;
+    tran3D.m34 = -0.002;
+    if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
+        attribute.transform3D = CATransform3DRotate(tran3D, M_PI/2 * rotation, 0, 1, 0);
+    }else {
+        attribute.transform3D= CATransform3DRotate(tran3D, M_PI/2 * rotation, 1, 0, 0);
+    }
+    return attribute;
 }
 @end
 

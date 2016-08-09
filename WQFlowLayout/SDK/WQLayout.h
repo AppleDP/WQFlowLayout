@@ -10,7 +10,9 @@
 
 typedef enum {
     WQScaleLayout,
-    WQRotationLayout
+    WQRotationLayout1,
+    WQRotationLayout2,
+    WQRotationLayout3
 }WQLayoutType;
 
 @interface WQLayout : UICollectionViewFlowLayout

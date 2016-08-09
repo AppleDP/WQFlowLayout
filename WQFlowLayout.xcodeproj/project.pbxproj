@@ -17,7 +17,6 @@
 		844F0BAF1D58141200ACF938 /* WQFlowLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BAE1D58141200ACF938 /* WQFlowLayoutUITests.m */; };
 		844F0BCE1D586C3E00ACF938 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844F0BC71D586C3E00ACF938 /* dog.jpg */; };
 		844F0BD91D5880CF00ACF938 /* UIView+ FrameChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BD31D5880CF00ACF938 /* UIView+ FrameChange.m */; };
-		844F0BDA1D5880CF00ACF938 /* UIView+anchorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BD51D5880CF00ACF938 /* UIView+anchorPoint.m */; };
 		844F0BDB1D5880CF00ACF938 /* WQLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BD81D5880CF00ACF938 /* WQLayout.m */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +56,6 @@
 		844F0BB01D58141200ACF938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844F0BC71D586C3E00ACF938 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		844F0BD31D5880CF00ACF938 /* UIView+ FrameChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ FrameChange.m"; sourceTree = "<group>"; };
-		844F0BD41D5880CF00ACF938 /* UIView+anchorPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+anchorPoint.h"; sourceTree = "<group>"; };
-		844F0BD51D5880CF00ACF938 /* UIView+anchorPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+anchorPoint.m"; sourceTree = "<group>"; };
 		844F0BD61D5880CF00ACF938 /* UIView+FrameChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameChange.h"; sourceTree = "<group>"; };
 		844F0BD71D5880CF00ACF938 /* WQLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQLayout.h; sourceTree = "<group>"; };
 		844F0BD81D5880CF00ACF938 /* WQLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLayout.m; sourceTree = "<group>"; };
@@ -157,8 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				844F0BD31D5880CF00ACF938 /* UIView+ FrameChange.m */,
-				844F0BD41D5880CF00ACF938 /* UIView+anchorPoint.h */,
-				844F0BD51D5880CF00ACF938 /* UIView+anchorPoint.m */,
 				844F0BD61D5880CF00ACF938 /* UIView+FrameChange.h */,
 				844F0BD71D5880CF00ACF938 /* WQLayout.h */,
 				844F0BD81D5880CF00ACF938 /* WQLayout.m */,
@@ -297,7 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844F0BDA1D5880CF00ACF938 /* UIView+anchorPoint.m in Sources */,
 				844F0B911D58141200ACF938 /* ViewController.m in Sources */,
 				844F0B8E1D58141200ACF938 /* AppDelegate.m in Sources */,
 				844F0BDB1D5880CF00ACF938 /* WQLayout.m in Sources */,
