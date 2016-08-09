@@ -37,10 +37,11 @@ static NSString * const Cell = @"Cell";
     layout.minimumLineSpacing = layout.itemSize.height/4;
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, sWidth, sHeight - 64)
                                              collectionViewLayout:layout];
+    
 //    // 3.2 动画方向(水平)
 //    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 //    layout.itemSize = CGSizeMake(sWidth/2, sWidth/2 * 4/3);
-//    layout.minimumLineSpacing = layout.itemSize.height/3;
+//    layout.minimumLineSpacing = 0;//layout.itemSize.height/3;
 //    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, sWidth, sHeight/2)
 //                                             collectionViewLayout:layout];
 //    self.collectionView.center = self.view.center;

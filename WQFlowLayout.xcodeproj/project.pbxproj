@@ -18,6 +18,10 @@
 		844F0BCE1D586C3E00ACF938 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844F0BC71D586C3E00ACF938 /* dog.jpg */; };
 		844F0BD91D5880CF00ACF938 /* UIView+ FrameChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BD31D5880CF00ACF938 /* UIView+ FrameChange.m */; };
 		844F0BDB1D5880CF00ACF938 /* WQLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BD81D5880CF00ACF938 /* WQLayout.m */; };
+		846660231D59A79E00F62098 /* rotation1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8466601F1D59A79E00F62098 /* rotation1.png */; };
+		846660241D59A79E00F62098 /* rotation2.png in Resources */ = {isa = PBXBuildFile; fileRef = 846660201D59A79E00F62098 /* rotation2.png */; };
+		846660251D59A79E00F62098 /* rotation3.png in Resources */ = {isa = PBXBuildFile; fileRef = 846660211D59A79E00F62098 /* rotation3.png */; };
+		846660261D59A79E00F62098 /* scale.png in Resources */ = {isa = PBXBuildFile; fileRef = 846660221D59A79E00F62098 /* scale.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		844F0BD61D5880CF00ACF938 /* UIView+FrameChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameChange.h"; sourceTree = "<group>"; };
 		844F0BD71D5880CF00ACF938 /* WQLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQLayout.h; sourceTree = "<group>"; };
 		844F0BD81D5880CF00ACF938 /* WQLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLayout.m; sourceTree = "<group>"; };
+		8466601F1D59A79E00F62098 /* rotation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation1.png; sourceTree = "<group>"; };
+		846660201D59A79E00F62098 /* rotation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation2.png; sourceTree = "<group>"; };
+		846660211D59A79E00F62098 /* rotation3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotation3.png; sourceTree = "<group>"; };
+		846660221D59A79E00F62098 /* scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scale.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 		844F0B881D58141200ACF938 /* WQFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
+				8466601E1D59A79E00F62098 /* UIScreenshot */,
 				844F0BD21D5880CF00ACF938 /* SDK */,
 				844F0B8C1D58141200ACF938 /* AppDelegate.h */,
 				844F0B8D1D58141200ACF938 /* AppDelegate.m */,
@@ -159,6 +168,17 @@
 				844F0BD81D5880CF00ACF938 /* WQLayout.m */,
 			);
 			path = SDK;
+			sourceTree = "<group>";
+		};
+		8466601E1D59A79E00F62098 /* UIScreenshot */ = {
+			isa = PBXGroup;
+			children = (
+				8466601F1D59A79E00F62098 /* rotation1.png */,
+				846660201D59A79E00F62098 /* rotation2.png */,
+				846660211D59A79E00F62098 /* rotation3.png */,
+				846660221D59A79E00F62098 /* scale.png */,
+			);
+			path = UIScreenshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +286,11 @@
 			files = (
 				844F0BCE1D586C3E00ACF938 /* dog.jpg in Resources */,
 				844F0B991D58141200ACF938 /* LaunchScreen.storyboard in Resources */,
+				846660241D59A79E00F62098 /* rotation2.png in Resources */,
+				846660231D59A79E00F62098 /* rotation1.png in Resources */,
+				846660261D59A79E00F62098 /* scale.png in Resources */,
 				844F0B961D58141200ACF938 /* Assets.xcassets in Resources */,
+				846660251D59A79E00F62098 /* rotation3.png in Resources */,
 				844F0B941D58141200ACF938 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
