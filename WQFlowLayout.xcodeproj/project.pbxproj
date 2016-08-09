@@ -15,6 +15,10 @@
 		844F0B991D58141200ACF938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F0B971D58141200ACF938 /* LaunchScreen.storyboard */; };
 		844F0BA41D58141200ACF938 /* WQFlowLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BA31D58141200ACF938 /* WQFlowLayoutTests.m */; };
 		844F0BAF1D58141200ACF938 /* WQFlowLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BAE1D58141200ACF938 /* WQFlowLayoutUITests.m */; };
+		844F0BCE1D586C3E00ACF938 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 844F0BC71D586C3E00ACF938 /* dog.jpg */; };
+		844F0BD91D5880CF00ACF938 /* UIView+ FrameChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BD31D5880CF00ACF938 /* UIView+ FrameChange.m */; };
+		844F0BDA1D5880CF00ACF938 /* UIView+anchorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BD51D5880CF00ACF938 /* UIView+anchorPoint.m */; };
+		844F0BDB1D5880CF00ACF938 /* WQLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F0BD81D5880CF00ACF938 /* WQLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,13 @@
 		844F0BAA1D58141200ACF938 /* WQFlowLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WQFlowLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844F0BAE1D58141200ACF938 /* WQFlowLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQFlowLayoutUITests.m; sourceTree = "<group>"; };
 		844F0BB01D58141200ACF938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844F0BC71D586C3E00ACF938 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
+		844F0BD31D5880CF00ACF938 /* UIView+ FrameChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ FrameChange.m"; sourceTree = "<group>"; };
+		844F0BD41D5880CF00ACF938 /* UIView+anchorPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+anchorPoint.h"; sourceTree = "<group>"; };
+		844F0BD51D5880CF00ACF938 /* UIView+anchorPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+anchorPoint.m"; sourceTree = "<group>"; };
+		844F0BD61D5880CF00ACF938 /* UIView+FrameChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameChange.h"; sourceTree = "<group>"; };
+		844F0BD71D5880CF00ACF938 /* WQLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQLayout.h; sourceTree = "<group>"; };
+		844F0BD81D5880CF00ACF938 /* WQLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +112,12 @@
 		844F0B881D58141200ACF938 /* WQFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
+				844F0BD21D5880CF00ACF938 /* SDK */,
 				844F0B8C1D58141200ACF938 /* AppDelegate.h */,
 				844F0B8D1D58141200ACF938 /* AppDelegate.m */,
 				844F0B8F1D58141200ACF938 /* ViewController.h */,
 				844F0B901D58141200ACF938 /* ViewController.m */,
+				844F0BC71D586C3E00ACF938 /* dog.jpg */,
 				844F0B921D58141200ACF938 /* Main.storyboard */,
 				844F0B951D58141200ACF938 /* Assets.xcassets */,
 				844F0B971D58141200ACF938 /* LaunchScreen.storyboard */,
@@ -138,6 +151,19 @@
 				844F0BB01D58141200ACF938 /* Info.plist */,
 			);
 			path = WQFlowLayoutUITests;
+			sourceTree = "<group>";
+		};
+		844F0BD21D5880CF00ACF938 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				844F0BD31D5880CF00ACF938 /* UIView+ FrameChange.m */,
+				844F0BD41D5880CF00ACF938 /* UIView+anchorPoint.h */,
+				844F0BD51D5880CF00ACF938 /* UIView+anchorPoint.m */,
+				844F0BD61D5880CF00ACF938 /* UIView+FrameChange.h */,
+				844F0BD71D5880CF00ACF938 /* WQLayout.h */,
+				844F0BD81D5880CF00ACF938 /* WQLayout.m */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844F0BCE1D586C3E00ACF938 /* dog.jpg in Resources */,
 				844F0B991D58141200ACF938 /* LaunchScreen.storyboard in Resources */,
 				844F0B961D58141200ACF938 /* Assets.xcassets in Resources */,
 				844F0B941D58141200ACF938 /* Main.storyboard in Resources */,
@@ -270,8 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844F0BDA1D5880CF00ACF938 /* UIView+anchorPoint.m in Sources */,
 				844F0B911D58141200ACF938 /* ViewController.m in Sources */,
 				844F0B8E1D58141200ACF938 /* AppDelegate.m in Sources */,
+				844F0BDB1D5880CF00ACF938 /* WQLayout.m in Sources */,
+				844F0BD91D5880CF00ACF938 /* UIView+ FrameChange.m in Sources */,
 				844F0B8B1D58141200ACF938 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +526,7 @@
 				844F0BB51D58141200ACF938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844F0BB61D58141200ACF938 /* Build configuration list for PBXNativeTarget "WQFlowLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +535,7 @@
 				844F0BB81D58141200ACF938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844F0BB91D58141200ACF938 /* Build configuration list for PBXNativeTarget "WQFlowLayoutUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +544,7 @@
 				844F0BBB1D58141200ACF938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
