@@ -16,8 +16,6 @@
 @property (nonatomic, assign) CGFloat aCenter;
 // collectionView 的长或宽
 @property (nonatomic, assign) CGFloat cSize;
-// item 的长或宽
-@property (nonatomic, assign) CGFloat iSize;
 @end
 
 @implementation WQLayout
@@ -33,13 +31,11 @@
     CGFloat inset = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? (self.collectionView.frame.size.width - self.itemSize.width) * 0.5 : (self.collectionView.frame.size.height - self.itemSize.height) * 0.5;
     self.sectionInset = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? UIEdgeInsetsMake(0, inset, 0, inset) : UIEdgeInsetsMake(inset, 0, inset, 0);
     
-    // collectionView 的相对于 contentSize 的最左边中心点（x或y）
+    // collectionView 的相对于 contentOffset 的最左边中心点（x或y）
     self.cCenter = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? self.collectionView.contentOffset.x + self.collectionView.width/2.0 : self.collectionView.contentOffset.y + self.collectionView.height/2.0;
     
     // collectionView 的长或宽
     self.cSize = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? self.collectionView.width : self.collectionView.height;
-    
-    self.iSize = self.scrollDirection == UICollectionViewScrollDirectionHorizontal ? self.itemSize.width : self.itemSize.height;
 }
 
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect{
